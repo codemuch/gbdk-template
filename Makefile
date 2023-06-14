@@ -10,14 +10,14 @@ TARGET = template.gb
 
 all: $(TARGET)
 
-# Make a .GB ROM, and remove all of the intermediate files
+# Make a .GB ROM in ./build (create it if it does not exist), and remove all of the intermediate files
 $(TARGET): $(OBJS)
-	$(CC) -o $@ $(OBJS)
-	rm -f ./src/*.o ./src/*.lst ./src/*.sym ./src/*.asm ./*.ihx
+	mkdir build 2>/dev/null; $(CC) -o ./build/$@ $(OBJS)
+	rm -f ./src/*.o ./src/*.lst ./src/*.sym ./src/*.asm ./build/*.ihx
 
 %.o: %.c
 	$(CC) $(COMPILER_FLAGS) $(INCLUDE_PATHS) -c $< -o $@
 
 # Delete all of the generated files including the ROM
 clean:
-	rm -f ./src/*.o ./src/*.lst ./src*.map ./src/*.gb ./src/*~ ./src/*.rel ./src/*.cdb ./src/*.lnk ./src/*.sym ./src/*.asm ./src/*.noi ./*.ihx ./*.gb
+	rm -f ./src/*.o ./src/*.lst ./src*.map ./src/*~ ./src/*.rel ./src/*.cdb ./src/*.lnk ./src/*.sym ./src/*.asm ./src/*.noi ./build/*.ihx

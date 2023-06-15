@@ -14,6 +14,7 @@ all: $(TARGET)
 $(TARGET): $(OBJS)
 	mkdir build 2>/dev/null; $(CC) -o ./build/$@ $(OBJS)
 	rm -f ./src/*.o ./src/*.lst ./src/*.sym ./src/*.asm ./build/*.ihx
+	rm -f ./lib/*.o ./lib/*.lst ./lib/*.sym ./lib/*.asm 
 
 %.o: %.c
 	$(CC) $(COMPILER_FLAGS) $(INCLUDE_PATHS) -c $< -o $@

@@ -1,6 +1,6 @@
 # GBDK Template
 
-This is my template for getting started with a fresh GBDK project using Emulicious in a VSCode workspace. The Intellisense configuration assumes you've installed GBDK in `~/dev/gbdk`.
+This is my template for getting started with a fresh GBDK project using Emulicious in a VSCode workspace on Linux. The Intellisense configuration assumes you've installed GBDK in `~/dev/gbdk`.
 
 The Emulicious Debugger plugin (emulicious.emulicious-debugger) will need to be installed and configured like so:
 1. Click the gear icon next to the Emulicious Debugger plugin

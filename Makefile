@@ -6,7 +6,7 @@ OBJS = $(SRCS:.c=.o)
 INCLUDE_PATHS = -Iinclude
 
 # Change this to what you would like to call your ROM
-TARGET = template.gb
+TARGET = bunny.gb
 
 all: $(TARGET)
 
@@ -21,3 +21,4 @@ $(TARGET): $(OBJS)
 # Delete all of the generated files including the ROM
 clean:
 	rm -f ./src/*.o ./src/*.lst ./src*.map ./src/*~ ./src/*.rel ./src/*.cdb ./src/*.lnk ./src/*.sym ./src/*.asm ./src/*.noi ./build/*.ihx
+	rm -f ./lib/*.o ./lib/*.lst ./lib*.map ./lib/*~ ./lib/*.rel ./lib/*.cdb ./lib/*.lnk ./lib/*.sym ./lib/*.asm ./lib/*.noi

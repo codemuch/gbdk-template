@@ -1,5 +1,4 @@
 #include "common.h"
-#include <inttypes.h>
 
 void main(void) {
 
